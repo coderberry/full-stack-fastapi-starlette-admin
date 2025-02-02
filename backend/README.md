@@ -170,3 +170,14 @@ The email templates are in `./backend/app/email-templates/`. Here, there are two
 Before continuing, ensure you have the [MJML extension](https://marketplace.visualstudio.com/items?itemName=attilabuti.vscode-mjml) installed in your VS Code.
 
 Once you have the MJML extension installed, you can create a new email template in the `src` directory. After creating the new email template and with the `.mjml` file open in your editor, open the command palette with `Ctrl+Shift+P` and search for `MJML: Export to HTML`. This will convert the `.mjml` file to a `.html` file and now you can save it in the build directory.
+
+## Using Starlette-Admin
+
+To use `starlette-admin` in this project, follow these steps:
+
+1. Install `starlette-admin` by adding it to the `backend/pyproject.toml` file.
+2. Create a new file `backend/app/admin.py` to configure and initialize `starlette-admin`.
+3. Update `backend/app/main.py` to include the `starlette-admin` routes.
+4. Configure the `starlette-admin` models to match the existing database models in `backend/app/models.py`.
+
+For more details, refer to the official [Starlette-Admin documentation](https://github.com/jowilf/starlette-admin).

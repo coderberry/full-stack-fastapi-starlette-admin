@@ -9,12 +9,7 @@
     - 🧰 [SQLModel](https://sqlmodel.tiangolo.com) for the Python SQL database interactions (ORM).
     - 🔍 [Pydantic](https://docs.pydantic.dev), used by FastAPI, for the data validation and settings management.
     - 💾 [PostgreSQL](https://www.postgresql.org) as the SQL database.
-- 🚀 [React](https://react.dev) for the frontend.
-    - 💃 Using TypeScript, hooks, Vite, and other parts of a modern frontend stack.
-    - 🎨 [Chakra UI](https://chakra-ui.com) for the frontend components.
-    - 🤖 An automatically generated frontend client.
-    - 🧪 [Playwright](https://playwright.dev) for End-to-End testing.
-    - 🦇 Dark mode support.
+    - 🛠️ [Starlette-Admin](https://github.com/jowilf/starlette-admin) for the admin interface.
 - 🐋 [Docker Compose](https://www.docker.com) for development and production.
 - 🔒 Secure password hashing by default.
 - 🔑 JWT (JSON Web Token) authentication.
@@ -23,30 +18,6 @@
 - 📞 [Traefik](https://traefik.io) as a reverse proxy / load balancer.
 - 🚢 Deployment instructions using Docker Compose, including how to set up a frontend Traefik proxy to handle automatic HTTPS certificates.
 - 🏭 CI (continuous integration) and CD (continuous deployment) based on GitHub Actions.
-
-### Dashboard Login
-
-[![API docs](img/login.png)](https://github.com/fastapi/full-stack-fastapi-template)
-
-### Dashboard - Admin
-
-[![API docs](img/dashboard.png)](https://github.com/fastapi/full-stack-fastapi-template)
-
-### Dashboard - Create User
-
-[![API docs](img/dashboard-create.png)](https://github.com/fastapi/full-stack-fastapi-template)
-
-### Dashboard - Items
-
-[![API docs](img/dashboard-items.png)](https://github.com/fastapi/full-stack-fastapi-template)
-
-### Dashboard - User Settings
-
-[![API docs](img/dashboard-user-settings.png)](https://github.com/fastapi/full-stack-fastapi-template)
-
-### Dashboard - Dark Mode
-
-[![API docs](img/dashboard-dark.png)](https://github.com/fastapi/full-stack-fastapi-template)
 
 ### Interactive API Documentation
 
@@ -216,10 +187,6 @@ The input variables, with their default values (some auto generated) are:
 
 Backend docs: [backend/README.md](./backend/README.md).
 
-## Frontend Development
-
-Frontend docs: [frontend/README.md](./frontend/README.md).
-
 ## Deployment
 
 Deployment docs: [deployment.md](./deployment.md).
@@ -229,6 +196,17 @@ Deployment docs: [deployment.md](./deployment.md).
 General development docs: [development.md](./development.md).
 
 This includes using Docker Compose, custom local domains, `.env` configurations, etc.
+
+## Using Starlette-Admin
+
+To use `starlette-admin` in this project, follow these steps:
+
+1. Install `starlette-admin` by adding it to the `backend/pyproject.toml` file.
+2. Create a new file `backend/app/admin.py` to configure and initialize `starlette-admin`.
+3. Update `backend/app/main.py` to include the `starlette-admin` routes.
+4. Configure the `starlette-admin` models to match the existing database models in `backend/app/models.py`.
+
+For more details, refer to the official [Starlette-Admin documentation](https://github.com/jowilf/starlette-admin).
 
 ## Release Notes
 
